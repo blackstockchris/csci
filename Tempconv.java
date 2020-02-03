@@ -16,24 +16,30 @@ public class Tempconv {
         System.out.println(menu);
         choice = keyboard.nextInt();
 
-        while (choice == 1 || choice == 2)
-        {
-            if (choice == 1)
-            {
+        if (choice == 1) {
 
-                System.out.println("Enter the degrees in Celsius you would like to convert to Fahrenheit");
-                C = keyboard.nextDouble();
-                F = ((C * 9) / 5) + 32;
-                System.out.println(+ C + " degrees Celsius is " + F + " degrees Fahrenheit");
-            }
-            else if (choice == 2)
-            {
+            System.out.println("Enter the degrees in Celsius you would like to convert to Fahrenheit");
+            C = keyboard.nextDouble();
+            F = ((C * 9) / 5) + 32;
+            System.out.println(+C + " degrees Celsius is " + F + " degrees Fahrenheit");
+            System.out.println(menu);
+            choice = keyboard.nextInt();
+        } else if (choice == 2) {
 
-                System.out.println("Enter the degrees in Fahrenheit you would like to convert to Celsius");
-                F = keyboard.nextDouble();
-                C = ((F - 32) * 5) / 9;
-                System.out.println(+ F + " degrees Fahrenheit is " + C + " degrees Celsius");
-            }
+            System.out.println("Enter the degrees in Fahrenheit you would like to convert to Celsius");
+            F = keyboard.nextDouble();
+            C = ((F - 32) * 5) / 9;
+            System.out.println(+F + " degrees Fahrenheit is " + C + " degrees Celsius");
+            System.out.println(menu);
+            choice = keyboard.nextInt();
+        } else if (choice == 3) {
+
+            System.out.println("I hope the weather suits you!");
+
+        } else {
+            System.out.println("Invalid choice");
+            System.out.println(menu);
+            choice = keyboard.nextInt();
         }
     }
 }
